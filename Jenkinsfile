@@ -1,7 +1,7 @@
 pipeline {
-    agent {
-	    label 'agent1'
-	}
+    agent any
+	   // label 'agent1'
+	//}
     environment {
        admin = "devops"
        }
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh "echo  clean install package"
 		sh "echo $PATH"
-                //sh "mvn clean install package"
+                sh "mvn clean install package"
 	    }
             }
         stage ('Deploy to container'){
