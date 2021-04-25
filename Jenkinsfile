@@ -14,7 +14,7 @@ pipeline {
         stage ('Build'){
             steps {
                 sh "echo  clean install package"
-		sh "echo $MVN"
+		sh "echo $PATH"
 		sh "echo $M2_HOME"
                 //sh "mvn clean install package"
 	    }
