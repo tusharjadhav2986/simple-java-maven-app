@@ -14,7 +14,7 @@ pipeline {
         stage ('Build'){
             steps {
                 sh "echo  clean install package"
-                sh "/opt/apache-maven-3.8.1/bin/mvn clean install package"
+                sh "mvn clean install package"
 	    }
             }
         stage ('Deploy to container'){
