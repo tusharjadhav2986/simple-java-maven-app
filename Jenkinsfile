@@ -4,6 +4,7 @@ pipeline {
 	}
     environment {
        admin = "devops"
+       mvn = "/opt/apache-maven-3.8.1/bin/mvn"
    }
 
     tools {
@@ -20,7 +21,7 @@ pipeline {
             steps {
                 sh "echo  clean install package"
                 //sh "/opt/apache-maven-3.8.1/bin/mvn clean install package"
-				sh "MVN/bin/mvn -Dmaven.test.failure.ignore=true clean install package"
+	      sh "mvn -Dmaven.test.failure.ignore=true clean install package"
                }
             }
         stage ('Deploy to container'){
