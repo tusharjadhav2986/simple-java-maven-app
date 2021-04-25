@@ -5,8 +5,6 @@ pipeline {
     environment {
        admin = "devops"
        }
-    }
-
     stages {
         stage ('Check-out'){
             steps {
